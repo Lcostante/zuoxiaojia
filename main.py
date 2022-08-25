@@ -134,7 +134,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     kaoyan_day = int(config["kaoyan_date"].split("-")[2])
     kaoyan_date = date(kaoyan_year, kaoyan_month, kaoyan_day)
 
-    kaoyan_days = str(today.__sub__(kaoyan_date)).split(" ")[0]
+    kaoyan_days = str(kaoyan_date.__sub__(today)).split(" ")[0]
 
     # 获取在一起的日期差
     love_days = str(today.__sub__(love_date)).split(" ")[0]
